@@ -1,10 +1,10 @@
-import React, { useState, useMemo, MutableRefObject, useEffect } from "react";
-import { scaleLinear, line as d3Line, select } from "d3";
-import { useChartDimensions } from "../hooks/useChartDimensions";
-import { XAxis, YAxis } from "../Axis";
-import { ChartSettings } from "../types/chart";
-import { Line, Circle } from "../DataVisualization";
-import { DataPoint } from "../types/chart";
+import React, { useState, useMemo, MutableRefObject } from "react";
+import { scaleLinear, line as d3Line } from "d3";
+import { useChartDimensions } from "../common/hooks/useChartDimensions";
+import { XAxis, YAxis } from "../common/Axis";
+import { ChartSettings } from "../common/types/chart";
+import { Line, Circle } from "../common/DataVisualization";
+import { DataPoint } from "../common/types/chart";
 
 function calculateDomain(values: number[]): [number, number] {
   return [Math.min(...values), Math.max(...values)];
